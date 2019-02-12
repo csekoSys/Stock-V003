@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../resources/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Összes funkció">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="cashregisterTypeSave" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton minHeight="80.0" minWidth="210.0" text="cashRegisterTypeSave" />
+            <JFXButton minHeight="80.0" minWidth="210.0" />
+            <JFXButton minHeight="80.0" minWidth="210.0" />
+            <JFXButton minHeight="80.0" minWidth="210.0" />
+            <JFXButton minHeight="80.0" minWidth="210.0" />
+            <JFXButton minHeight="80.0" minWidth="210.0" />
+            <JFXButton minHeight="80.0" minWidth="210.0" />
+            <JFXButton minHeight="80.0" minWidth="210.0" />
+         </children></VBox>
+   </left>
+   <center>
+      <VBox fx:id="contentVBox" prefHeight="200.0" prefWidth="100.0" stylesheets="@../resources/default.css" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
