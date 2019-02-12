@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../resources/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" stylesheets="@../resources/default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.RootLayoutController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -20,7 +20,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Összes funkció">
                <items>
-                  <MenuItem mnemonicParsing="false" text="cashregisterTypeSave" />
+                  <MenuItem mnemonicParsing="false" onAction="#addCashregisterTypeMenu" text="addCashregisterType" />
                </items>
           </Menu>
         </menus>
@@ -29,7 +29,7 @@
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton minHeight="80.0" minWidth="210.0" text="cashRegisterTypeSave" />
+            <JFXButton minHeight="80.0" minWidth="210.0" onAction="#addCashregisterTypeButton" text="addCashRegisterType" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
@@ -37,9 +37,15 @@
             <JFXButton minHeight="80.0" minWidth="210.0" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
-         </children></VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin></VBox>
    </left>
    <center>
-      <VBox fx:id="contentVBox" prefHeight="200.0" prefWidth="100.0" stylesheets="@../resources/default.css" BorderPane.alignment="CENTER" />
+      <VBox fx:id="contentVBox" prefHeight="200.0" prefWidth="100.0" stylesheets="@../resources/default.css" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+         </BorderPane.margin></VBox>
    </center>
 </BorderPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.cashregistertype.add.AddCashregisterTypeController">
+   <children>
+      <Label fx:id="contentVBoxTitleLabel" text="Cím">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="20.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <JFXButton alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="Ment" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
