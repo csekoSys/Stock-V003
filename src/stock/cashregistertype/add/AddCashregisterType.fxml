@@ -10,62 +10,68 @@
 <?import javafx.scene.layout.*?>
 
 
-<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.cashregistertype.add.AddCashregisterTypeController">
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.cashregistertype.add.AddCashregisterTypeController">
    <children>
-      <Label fx:id="contentVBoxTitleLabel" text="Cím">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="20.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <JFXTextField labelFloat="true" maxWidth="300.0" minWidth="200.0" promptText="A típus neve">
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
-      </JFXTextField>
-      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+      <VBox>
          <children>
-            <JFXButton alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="Ment" />
+            <Label fx:id="contentVBoxTitleLabel" text="Cím">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField labelFloat="true" promptText="A típus neve">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="A típus neve">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="A típus neve">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="A típus neve">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField labelFloat="true" promptText="A típus neve">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextArea labelFloat="true" promptText="Megjegyzés">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextArea>
+            <HBox prefHeight="31.0" prefWidth="517.0">
+               <children>
+                  <JFXCheckBox selected="true" text="Aktív" />
+                  <JFXCheckBox selected="true" text="Gyártható">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXCheckBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <JFXButton alignment="CENTER" prefHeight="50.0" prefWidth="180.0" text="Ment" />
+                  <JFXButton alignment="CENTER" prefHeight="50.0" prefWidth="180.0" text="Kilép" />
+               </children>
+            </HBox>
          </children>
-      </HBox>
+      </VBox>
    </children>
-</VBox>
+   <padding>
+      <Insets left="5.0" right="5.0" />
+   </padding>
+</StackPane>

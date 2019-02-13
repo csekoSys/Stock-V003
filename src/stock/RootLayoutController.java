@@ -12,13 +12,19 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import stock.util.Tools;
 
 public class RootLayoutController implements Initializable {
 
+    private Tools tools;
+
     @FXML
     private VBox contentVBox;
+    @FXML
+    private BorderPane rootPane;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -38,7 +44,7 @@ public class RootLayoutController implements Initializable {
     @FXML
     private void addCashregisterTypeButton(ActionEvent event) {
         try {
-            contentVBox.getChildren().add(loadWindow("/stock/cashregistertype/add/AddCashregisterType.fxml"));
+            tools.openWindow("/stock/cashregistertype/add/AddCashregisterType.fxml");
         } catch (IOException ex) {
             System.err.println("Hiba a /stock/cashregistertype/add/AddCashregisterType.fxml betöltése közben");
             Logger.getLogger(RootLayoutController.class.getName()).log(Level.SEVERE, null, ex);
@@ -50,5 +56,4 @@ public class RootLayoutController implements Initializable {
         Parent window = FXMLLoader.load(getClass().getResource(url));
         return window;
     }
-
 }
