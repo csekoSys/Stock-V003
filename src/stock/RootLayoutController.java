@@ -10,14 +10,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import stock.util.Tools;
+import javafx.stage.Stage;
 
 public class RootLayoutController implements Initializable {
-
-    private Tools tools;
 
     @FXML
     private VBox contentVBox;
@@ -35,6 +34,14 @@ public class RootLayoutController implements Initializable {
         return window;
     }
 
+    public void openWindow(String loc) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(loc));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
     @FXML
     private void addCashregisterTypeMenu(ActionEvent event) throws IOException {
         try {
@@ -48,7 +55,7 @@ public class RootLayoutController implements Initializable {
     @FXML
     private void addCashregisterTypeButton(ActionEvent event) {
         try {
-            tools.openWindow("/stock/cashregistertype/add/AddCashregisterType.fxml");
+            openWindow("/stock/cashregistertype/add/AddCashregisterType.fxml");
         } catch (IOException ex) {
             System.err.println("Hiba a /stock/cashregistertype/add/AddCashregisterType.fxml betöltése közben");
             Logger.getLogger(RootLayoutController.class.getName()).log(Level.SEVERE, null, ex);
