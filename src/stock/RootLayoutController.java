@@ -10,11 +10,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 import stock.util.Tools;
 
 public class RootLayoutController implements Initializable {
@@ -29,6 +27,12 @@ public class RootLayoutController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         contentVBox.getChildren().add(new Label("Kezdőképernyő"));
+    }
+
+    public Parent loadWindow(String url) throws IOException {
+        contentVBox.getChildren().clear();
+        Parent window = FXMLLoader.load(getClass().getResource(url));
+        return window;
     }
 
     @FXML
@@ -51,9 +55,23 @@ public class RootLayoutController implements Initializable {
         }
     }
 
-    public Parent loadWindow(String url) throws IOException {
-        contentVBox.getChildren().clear();
-        Parent window = FXMLLoader.load(getClass().getResource(url));
-        return window;
+    @FXML
+    private void listCashregisterTypeMenu(ActionEvent event) {
+        try {
+            contentVBox.getChildren().add(loadWindow("/stock/cashregistertype/list/ListCashregisterType.fxml"));
+        } catch (IOException ex) {
+            System.err.println("Hiba a /stock/cashregistertype/list/ListCashregisterType.fxml betöltése közben");
+            Logger.getLogger(RootLayoutController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    private void listCashregisterTypeButton(ActionEvent event) {
+        try {
+            contentVBox.getChildren().add(loadWindow("/stock/cashregistertype/list/ListCashregisterType.fxml"));
+        } catch (IOException ex) {
+            System.err.println("Hiba a /stock/cashregistertype/list/ListCashregisterType.fxml betöltése közben");
+            Logger.getLogger(RootLayoutController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

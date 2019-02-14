@@ -21,6 +21,7 @@
           <Menu mnemonicParsing="false" text="Összes funkció">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#addCashregisterTypeMenu" text="addCashregisterType" />
+                  <MenuItem mnemonicParsing="false" onAction="#listCashregisterTypeMenu" text="listCashregisterTypeMenu" />
                </items>
           </Menu>
         </menus>
@@ -30,7 +31,7 @@
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <children>
             <JFXButton minHeight="80.0" minWidth="210.0" onAction="#addCashregisterTypeButton" text="addCashRegisterType" />
-            <JFXButton minHeight="80.0" minWidth="210.0" />
+            <JFXButton minHeight="80.0" minWidth="210.0" onAction="#listCashregisterTypeButton" text="listCashregisterTypeButton" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
             <JFXButton minHeight="80.0" minWidth="210.0" />
