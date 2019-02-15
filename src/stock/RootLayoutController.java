@@ -16,6 +16,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 public class RootLayoutController implements Initializable {
 
     @FXML
@@ -25,6 +29,7 @@ public class RootLayoutController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        hibernateConfig();
         contentVBox.getChildren().add(new Label("Kezdőképernyő"));
     }
 
@@ -80,5 +85,10 @@ public class RootLayoutController implements Initializable {
             System.err.println("Hiba a /stock/cashregistertype/list/ListCashregisterType.fxml betöltése közben");
             Logger.getLogger(RootLayoutController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    private void hibernateConfig() {
+        Configuration cfg = new Configuration().configure("./resources/hibernate.cfg.xml");
+        SessionFactory sf = cfg.buildSessionFactory();
     }
 }
